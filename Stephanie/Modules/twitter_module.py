@@ -72,9 +72,10 @@ class TwitterModule(BaseModule):
         #     latest_direct_messages_id.append(directMessage.id)
         response = ""
         if len(latest_retweets) > 0:
-            response += "Latest Retweets are "
+            #response += "Latest Retweets are "
             for retweetFinal in latest_retweets:
-                response += (retweetFinal.text + " by " + retweetFinal.user.screen_name + ". ")
+                #response += (retweetFinal.text + " by " + retweetFinal.user.screen_name + ". ")
+                response += (retweetFinal.user.screen_name + " retweeted your tweet, quote " + retweetFinal.text + ". ")
         else:
             response += ("You have no re-tweets. ")
 
